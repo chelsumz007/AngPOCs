@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="table-responsive-sm">
+		<h4>User Details</h4>
+		<table class="table table-sm table-bordered table-striped">
+			<thead>
+				<tr class="table-primary">
+					<th id="firstName">Name</th>
+					<th id="lastName">Age</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr style="text-align:left" *ngFor="let user of users">
+					<td>{{user?.name}}</td>
+					<td>{{user?.age}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<h4>Toggle Content Using NgIf Else</h4>
+	<input [(ngModel)]="toggle" type="checkbox" /> Show Hidden Message?
+	<hr />
+	<div *ngIf="!toggle; else toggleShow">
+		Click the checkbox above to reveal the secret message!
+	</div>
+	<ng-template #toggleShow>
+		Congratulations, you've toggled the secret message!
+	</ng-template>
+</div>
