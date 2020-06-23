@@ -1,0 +1,23 @@
+<div class="table-container container">
+	<h5 class="title is-5" style="padding-left: 85px;">Well-List</h5>
+	<table class="table is-bordered is-striped">
+		<thead>
+			<tr>
+				<th id="name">Name</th>
+				<th id="type">Type</th>
+				<th id="source">Source</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let well of wellList; trackBy: trackByFn">
+				<td>{{well.name}}</td>
+				<td [ngClass]="well.type === 'rls' ? 'rlsClass' : 'espClass' ">{{well.type}}</td>
+				<td><a (click)="showAddWellsFn(well.sourceKey)">{{well.sourceKey}}</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<router-outlet>
+	<well [sourceKey]="this.currentSource" (onAddingWell)="newWellDetails($event)" *ngIf="showAddWells"></well>
+</router-outlet>

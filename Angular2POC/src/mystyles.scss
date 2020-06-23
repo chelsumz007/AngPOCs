@@ -1,0 +1,13 @@
+// 1. Import the initial variables
+@import "../node_modules//bulma/sass/utilities/initial-variables.sass";
+@import "../node_modules/bulma/sass/utilities/functions.sass";
+
+// 2. Set your own initial variables
+$blue: hsl(171, 100%, 41%);
+
+// 3. Set the derived variables
+$table-head-background-color: $blue;
+
+
+// 6. Import the rest of Bulma
+@import "../node_modules/bulma";

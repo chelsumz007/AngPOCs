@@ -1,0 +1,17 @@
+.container {
+	padding: 10px 10px;
+}
+
+.mainBtn {
+	padding-left: 10px;
+}
+
+.rlsClass {
+	background-color: hsl(204, 86%, 53%);
+	color: hsl(0, 0%, 96%);
+}
+
+.espClass {
+	background-color: hsl(48, 100%, 67%);
+	color: hsl(0, 0%, 29%);
+}

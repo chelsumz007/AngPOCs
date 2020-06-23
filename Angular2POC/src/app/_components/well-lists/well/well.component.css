@@ -1,0 +1,22 @@
+.mainContainer {
+	padding: 10px 0;
+}
+
+.container {
+	padding: 20px;
+	box-sizing: border-box;
+	border: 1px solid;
+}
+
+.error {
+	font-style: italic;
+	font-weight: bold;
+	font-size: 80%;
+	color: #dc3545;
+}
+
+.invalid-feedback {
+	font-style: italic;
+	font-weight: bold;
+	color: #dc3545;
+}
