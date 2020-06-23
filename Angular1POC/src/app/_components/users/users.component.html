@@ -9,7 +9,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr style="text-align:center" *ngFor="let user of users">
+				<tr style="text-align:center" *ngFor="let user of users; trackBy: trackByFn">
 					<td>{{user?.name}}</td>
 					<td>{{user?.age}}</td>
 				</tr>

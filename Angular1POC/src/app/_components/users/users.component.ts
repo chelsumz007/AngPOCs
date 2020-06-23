@@ -14,11 +14,15 @@ export class UsersComponent implements OnInit {
 
 	ngOnInit() {
 		this.users = [
-			{ name: "Mahesh", age: 25 },
-			{ name: "Shakti", age: 23 },
-			{ name: "Krishna", age: 23 },
-			{ name: "Radha", age: 21 },
+			{ id: 1, name: "Mahesh", age: 25 },
+			{ id: 2, name: "Shakti", age: 23 },
+			{ id: 3, name: "Krishna", age: 23 },
+			{ id: 4, name: "Radha", age: 21 },
 		]
 	}
+
+	trackByFn(index, item) {
+    return item.id;
+  }
 
 }
