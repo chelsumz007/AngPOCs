@@ -1,4 +1,3 @@
-import { Router } from '@angular/router';
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -14,7 +13,7 @@ export class WellComponent implements OnInit {
 	wellForm: FormGroup;
 	@Output() onAddingWell: EventEmitter<any> = new EventEmitter<any>();
 
-	constructor(private fb: FormBuilder, private router: Router) {
+	constructor(private fb: FormBuilder) {
 	}
 
 	ngOnInit() {
@@ -25,8 +24,14 @@ export class WellComponent implements OnInit {
 		});
 	}
 
+	/**
+	 * Getting Controls of Forms
+	 */
 	get f() { return this.wellForm.controls; }
 
+	/**
+	 * Form Submit Function
+	 */
 	onSubmit() {
 		this.isSubmitted = true;
 		if (!this.wellForm.valid) {

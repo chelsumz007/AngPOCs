@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
 	selector: 'well-lists',
@@ -11,27 +10,35 @@ export class WellListsComponent implements OnInit {
 	showAddWells: boolean = false;
 	currentSource: any;
 
-	constructor(private route: ActivatedRoute, private router: Router) { }
+	constructor() { }
 
 	ngOnInit() {
 		this.wellList = [
-			{ id: 1, name: "newrlswell", type: "rls", sourceKey: 10001 },
-			{ id: 2, name: "testWell", type: "esp", sourceKey: 11001 },
-			{ id: 3, name: "testWell2", type: "rls", sourceKey: 10001 }
+			{ name: "newrlswell", type: "rls", sourceKey: 10001 },
+			{ name: "testWell", type: "esp", sourceKey: 11001 },
+			{ name: "testWell2", type: "rls", sourceKey: 10001 }
 		]
 	}
 
+	/**
+	 * Toggling Show Logic
+	 */
 	showAddWellsFn(event) {
 		this.showAddWells = !this.showAddWells;
 		this.currentSource = event;
 	}
 
+	/**
+	 * New Wells Adition Logic
+	 */
 	newWellDetails(event) {
 		this.wellList.push(event);
 	}
 
+	/**
+	 * Improvement Function
+	 */
 	trackByFn(index, item) {
-		return item.id;
+		return index;
 	}
-
 }
