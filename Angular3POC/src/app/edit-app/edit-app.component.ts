@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DndDropEvent, DropEffect } from 'ngx-drag-drop';
 import { field, value } from '../global.model';
-import { ActivatedRoute } from '@angular/router';
 import swal from 'sweetalert2';
 
 @Component({
@@ -176,9 +175,7 @@ export class EditAppComponent implements OnInit {
 	report = false;
 	reports: any = [];
 
-	constructor(
-		private route: ActivatedRoute
-	) { }
+	constructor() { }
 
 	ngOnInit() {
 	}
